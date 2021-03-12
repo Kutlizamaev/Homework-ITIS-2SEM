@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LIST
 {
-    class ShipDateSort
+    static class DateSort
     {
         private static void Swap(List<string[]> list, int x, int y)
         {
@@ -19,8 +19,8 @@ namespace LIST
 
             for (int i = minIndex; i < maxIndex; i++)
             {
-                var dateFirst = DateTime.Parse(list[i][20]);
-                var dateSecond = DateTime.Parse(list[maxIndex][20]);
+                var dateFirst = DateTime.Parse(list[i][2]);
+                var dateSecond = DateTime.Parse(list[maxIndex][2]);
                 if (dateFirst > dateSecond)
                 {
                     pivot++;

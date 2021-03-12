@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
 
 namespace LIST
 {
@@ -28,24 +27,7 @@ namespace LIST
                 arraysList.Add(list[i].Split(';'));
             }
 
-            Console.Write("Сортировки:\n1. По приоритету заказа.\n2. По дате принятия заказа.\n3. По дате прибытия заказа.\n");
-            Console.Write("Введите: ");
-            int choice = Convert.ToInt32(Console.ReadLine());
-
-            switch (choice)
-            {
-                case 1:
-                    arraysList = PrioritySort.Sorting(arraysList);
-                    break;
-                case 2:
-                    arraysList = OrderDateSort.Sorting(arraysList);
-                    break;
-                case 3:
-                    arraysList = ShipDateSort.Sorting(arraysList);
-                    break;
-                default:
-                    break;
-            }
+            arraysList = ListsPriority.SortPriority(arraysList);
 
             Output(arraysList);
         }
