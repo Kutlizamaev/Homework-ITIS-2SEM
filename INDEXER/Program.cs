@@ -9,7 +9,7 @@ namespace INDEXER
             Array a = new Array(3, 3);
             a.ArrayElem();
             a.InputArray();
-            a
+            
         }
     }
 }

@@ -10,6 +10,7 @@ namespace GENERICS
         {
             dynamic a = this.num;
             dynamic b = n.num;
+
             if (a is string)
             {
                 dynamic c = Convert.ToInt32(a) + Convert.ToInt32(b);
